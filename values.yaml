@@ -1,1 +1,5 @@
 image: <+artifact.image>
+port: 80
+replicas: 1
+namespace: default
+env_name: UNDEFINED
