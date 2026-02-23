@@ -1,5 +1,5 @@
 image: <+artifact.image>
 port: 80
 replicas: 1
-namespace: default
-env_name: UNDEFINED
+namespace: <+pipeline.stages.DeploytoDev.spec.infrastructure.infraInputs.spec.namespace>
+env_name: <+pipeline.stages.DeploytoDev.spec.infrastructure.output.environment.variables.env_name>
