@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: approve-container
-        image: <+artifact.image>
+        image: <+pipeline.stages.DeploytoDev.spec.artifacts.primary.image>
         ports:
         - containerPort: 80
