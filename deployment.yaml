@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: approve-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: approve
+  template:
+    metadata:
+      labels:
+        app: approve
+    spec:
+      containers:
+      - name: approve-container
+        image: <+artifact.image>
+        ports:
+        - containerPort: 80
