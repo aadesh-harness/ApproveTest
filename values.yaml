@@ -1,5 +1,5 @@
 image: <+artifact.image>
 port: 80
 replicas: 1
-namespace: <+spec.namespace>
-env_name: <+variables.env_name>
+namespace: <+pipeline.stages.DeploytoDev.spec.infrastructure.output.environment.variables.namespace>
+env_name: <+pipeline.stages.DeploytoDev.spec.infrastructure.output.environment.variables.namespace>
