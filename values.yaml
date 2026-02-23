@@ -1,5 +1,5 @@
 image: <+artifact.image>
 port: 80
 replicas: 1
-namespace: <+namespace>
-env_name: <+namespace>
+namespace: <+serviceVariables.namespace>
+env_name: <+serviceVariables.env_name>
