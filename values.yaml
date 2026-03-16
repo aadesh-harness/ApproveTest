@@ -3,6 +3,4 @@ port: 80
 replicas: 1
 namespace: <+serviceVariables.namespace>
 env_name: <+serviceVariables.env_name>
-labels:
-  app: <+serviceVariables.app_label>
 annotations: {}
