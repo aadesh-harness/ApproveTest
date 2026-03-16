@@ -3,15 +3,19 @@ kind: Deployment
 metadata:
   name: approve-deployment
   namespace: {{.Values.namespace}}
+  {{- if .Values.annotations }}
+  annotations:
+    {{- toYaml .Values.annotations | nindent 4 }}
+  {{- end }}
 spec:
   replicas: {{.Values.replicas}}
   selector:
     matchLabels:
-      app: approve
+      {{- toYaml .Values.labels | nindent 6 }}
   template:
     metadata:
       labels:
-        app: approve
+        {{- toYaml .Values.labels | nindent 8 }}
     spec:
       containers:
       - name: approve-container
