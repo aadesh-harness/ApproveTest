@@ -3,4 +3,4 @@ port: 80
 replicas: 1
 namespace: <+serviceVariables.namespace>
 env_name: <+serviceVariables.env_name>
-annotations: <+pipeline.variables.skip>
+annotations: {harness.io/direct-apply:  "<+pipeline.variables.skip>"}
