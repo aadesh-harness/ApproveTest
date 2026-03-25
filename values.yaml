@@ -2,6 +2,8 @@
 image: nginx:latest
 port: 80
 replicas: 1
-namespace: <+serviceVariables.namespace>
-env_name: <+serviceVariables.env_name>
+# namespace: <+serviceVariables.namespace>
+# env_name: <+serviceVariables.env_name>
+namespace: optum-bg
+env_name: optum-bg-poc
 annotations: {harness.io/direct-apply:  "<+pipeline.variables.skip>"}
